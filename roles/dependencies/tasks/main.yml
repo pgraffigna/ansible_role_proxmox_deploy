@@ -1,0 +1,33 @@
+---
+- name: Eliminar repos enterprise
+  file:
+    path: /etc/apt/sources.list.d/pve-enterprise.list
+    state: absent 
+
+- name: Agregar repos community
+  apt_repository:
+    repo: deb http://download.proxmox.com/debian/pve buster pve-no-subscription
+    state: present
+
+- name: Actualizar la cache de los repos
+  apt:
+    update_cache: yes
+
+- name: Instalacion de python-apt 
+  apt:
+    name: python-apt
+    state: present    
+
+- name: Instalación pip 
+  apt:
+    name: ['python-pip', 'python-dev', 'build-essential']
+      
+- name: Actualizacion pip
+  pip:
+    name: pip
+    state: latest
+
+- name: Instalacion de dependencias
+  pip:
+    name: ['requests', 'proxmoxer']
+    

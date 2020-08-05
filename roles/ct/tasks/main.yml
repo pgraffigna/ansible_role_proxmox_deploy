@@ -1,0 +1,15 @@
+---
+- name: Crear nuevo container # vmid + network (DHCP)
+  proxmox:
+    vmid: 101
+    node: $NODO
+    api_user: root@pam
+    api_password: $PASS
+    api_host: 192.168.0.10
+    hostname: ubnt-ansible-test 
+    password: $USERPASS_VM
+    unprivileged: yes
+    ostemplate: 'local:vztmpl/$TEMPLATE'
+    storage: local-lvm
+    cores: 1
+    netif: '{"net0":"name=eth0,ip=dhcp,ip6=dhcp,bridge=vmbr0"}'

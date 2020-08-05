@@ -1,0 +1,6 @@
+[proxmox]
+192.168.0.10
+
+[proxmox:vars]
+ansible_ssh_user: $USER
+ansible_ssh_pass: $PASS
