@@ -2,4 +2,3 @@
 
 Playbook para crear Containers via ansible en Proxmox
 
-Testeado con vagrant + proxmox
