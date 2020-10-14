@@ -2,3 +2,7 @@
 
 Playbook para crear Containers via ansible en Proxmox
 
+roles:	
+- dependencies 
+- ct
+
