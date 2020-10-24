@@ -1,0 +1,21 @@
+Instalación Proxmox en Virtualbox (Networking)
+----
+red: NAT
+adaptador: e1000
+modo: promiscuo
+
+Vbox portforwarding:
+nombre: SSH --> protocolo: tcp --> ip anfitrion: 127.0.0.1 --> puerto: 2222 --> ip invitado: <opcional> --> puerto: 22
+nombre: WEB --> protocolo: tcp --> ip anfitrion: 127.0.0.1 --> puerto: 8006 --> ip invitado: <opcional> --> puerto: 8006
+
+acceso WEB
+https://localhost:8006
+
+acceso SSH
+ssh root@localhost -p 2222
+
+ansible adhoc
+ansible tunnel -m ping -k
+
+ansible-playbook
+ansible-playbook main.yml --limit tunnel -k

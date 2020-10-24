@@ -1,6 +1,5 @@
 [proxmox]
-192.168.0.10
+tunnel ansible_host=127.0.0.1 ansible_port=2222
 
 [proxmox:vars]
-ansible_ssh_user: $USER
-ansible_ssh_pass: $PASS
+ansible_ssh_user=root 

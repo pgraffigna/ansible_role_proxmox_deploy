@@ -1,0 +1,11 @@
+---
+vmid: "100"
+node: proxmox
+api_user: root@pam
+api_password: PASSWORD
+api_host: localhost
+hostname: ubnt-test 
+password: ubuntu
+ostemplate: local:vztmpl/ubuntu-18.04-standard_18.04.1-1_amd64.tar.gz
+storage: local-lvm
+cores: 1
