@@ -1,7 +1,6 @@
 ---
 - hosts: proxmox
-  become: true
-  
+    
   roles:	 
     - dependencies 
     - ct

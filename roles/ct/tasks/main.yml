@@ -12,4 +12,7 @@
     ostemplate: "{{ ostemplate }}"
     storage: "{{ storage }}"
     cores: 1
-    netif: '{"net0":"name=eth0,ip=dhcp,ip6=dhcp,bridge=vmbr0"}'
+    pubkey: "{{ pubkey }}" 
+    disk: "{{ disk }}"
+    memory: "{{ memory }}"
+    onboot: yes

@@ -8,3 +8,7 @@ roles:
 
 notas:
 - instalación virtualbox (networking)
+
+dark_mode:
+- wget https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.py
+- python3 PVEDiscordDark.py
