@@ -16,3 +16,4 @@
     disk: "{{ disk }}"
     memory: "{{ memory }}"
     onboot: yes
+    netif: '{"net0":"name=eth0,ip=dhcp,ip6=dhcp,bridge=vmbr0"}'
