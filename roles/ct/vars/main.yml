@@ -3,12 +3,12 @@ vmid: "100"
 node: proxmox
 api_user: root@pam
 api_password: PASSWORD
-api_host: IP_SERVER
-hostname: ubnt-test 
-password: PASSWORD
-ostemplate: local:vztmpl/ubuntu-18.04-standard_18.04.1-1_amd64.tar.gz
+api_host: 10.21.7.136
+hostname: HOST 
+#password: PASSWORD
+ostemplate: local:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz
 storage: local-lvm
-pubkey: ID_RSA.PUB
+pubkey: id_rsa.pub
 disk: "5"
 memory: "512"
 

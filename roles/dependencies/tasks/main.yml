@@ -12,15 +12,11 @@
 - name: Actualiza la cache de los repos
   apt:
     update_cache: yes
-
-- name: Instalacion de python-apt 
-  apt:
-    name: python-apt
-    state: present    
+    cache_valid_time: 3600
 
 - name: Instalación de pip 
   apt:
-    name: ['python-pip', 'python-dev', 'build-essential']
+    name: ['python3-pip', 'python3-dev', 'build-essential']
       
 - name: Actualizacion de pip
   pip:
