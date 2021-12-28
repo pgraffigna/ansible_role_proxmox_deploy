@@ -7,7 +7,7 @@
     api_password: "{{ api_password }}"
     api_host: "{{ api_host }}"
     hostname: "{{ hostname }}" 
-    #password: "{{ password }}"
+    password: "{{ password }}"
     unprivileged: yes
     ostemplate: "{{ ostemplate }}"
     storage: "{{ storage }}"

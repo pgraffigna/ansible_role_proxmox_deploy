@@ -1,14 +1,14 @@
 ---
 vmid: "100"
-node: proxmox
+node: pve
 api_user: root@pam
 api_password: PASSWORD
-api_host: 10.21.7.136
-hostname: HOST 
-#password: PASSWORD
+api_host: IP_SERVER
+hostname: pve.local
+password: PASSWORD_CT
 ostemplate: local:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz
 storage: local-lvm
-pubkey: id_rsa.pub
+pubkey: id_rsa.pub 
 disk: "5"
 memory: "512"
 
