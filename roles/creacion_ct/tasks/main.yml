@@ -1,18 +1,20 @@
 ---
-- name: Creacion de nuevo contenedor 
+- include_vars: ../../../vars_main.yml
+
+- name: Creacion de nuevo contenedor
   proxmox:
     vmid: "{{ vmid }}"
     node: "{{ node }}"
     api_user: "{{ api_user }}"
     api_password: "{{ api_password }}"
     api_host: "{{ api_host }}"
-    hostname: "{{ hostname }}" 
+    hostname: "{{ hostname }}"
     password: "{{ password }}"
     unprivileged: yes
     ostemplate: "{{ ostemplate }}"
     storage: "{{ storage }}"
     cores: 1
-    pubkey: "{{ pubkey }}" 
+    pubkey: "{{ pubkey }}"
     disk: "{{ disk }}"
     memory: "{{ memory }}"
     onboot: yes

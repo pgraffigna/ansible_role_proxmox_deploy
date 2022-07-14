@@ -2,17 +2,17 @@
 
 Playbook para crear contenedores via ansible en Proxmox-ve instalado en Virtualbox
 
-roles:	
-- dependencies 
-- ct
+roles:
+- dependencias
+- creacion_ct
+- destruir_ct
+- creacion_vms
+- destruir_vm
 
 ---
 
-dark_mode:
-```bash
-wget https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.py
-python3 PVEDiscordDark.py
-```
+proxmox script helper: [helper-scripts](https://tteck.github.io/Proxmox/)
+
 ---
 
 Chequear que la API esta funcionando 
@@ -22,22 +22,21 @@ curl -k -d "username=root@pam&password=yourpassword" https://10.0.0.1:8006/api2/
 ```
 ---
 
-Chequear dependencias:
-
-en host: tener instalado ansible
+## instalacion ansible
 ```bash
+apt update && apt install -y python3-pip
 pip3 install --upgrade ansible
 ```
 ---
 
-en servidor: tener instalador los paquetes proxmoxer y requests
+## en servidor proxmox: tener instalado proxmoxer
 ```bash
-pip3 install proxmoxer requests
+pip3 install proxmoxer 
 ```
 ---
 
-para instalar pip:
+## dependencias modulo proxmox
 ```bash
-apt update && apt upgrade && apt install -y python3-pip 
+ansible-galaxy collection install community.general
 ```
 

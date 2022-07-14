@@ -1,0 +1,18 @@
+---
+repo: http://download.proxmox.com/debian/pve
+vmid:
+node: NODO_PROXMOX
+api_user: root@pam
+api_password: API_PROXMOX
+api_host: 10.10.6.113
+hostname: ansible
+password: SHA-512 PASSWORD
+ostemplate: vms:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz
+storage: vms
+pubkey: PUBKEY
+disk: "5"
+memory: "512"
+
+# vmid: <vacio> usa el siguiente vmid disponible
+# password: mkpasswd -m sha-512 PASSWORD
+

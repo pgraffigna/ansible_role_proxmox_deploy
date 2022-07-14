@@ -1,0 +1,21 @@
+---
+- include_vars: ../../../vars_main.yml
+
+- name: Stopea contenedor
+  proxmox_kvm:
+    api_host: "{{ api_host }}"
+    api_user: "{{ api_user }}"
+    api_password: "{{ api_password }}"
+    node: "{{ node }}"
+    vmid: "{{ custom_vmid }}"
+    state: stopped
+
+- name: Elimina contenedor
+  proxmox_kvm:
+    api_host: "{{ api_host }}"
+    api_user: "{{ api_user }}"
+    api_password: "{{ api_password }}"
+    node: "{{ node }}"
+    vmid: "{{ custom_vmid }}"
+    state: absent
+

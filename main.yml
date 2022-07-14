@@ -1,7 +1,17 @@
 ---
 - hosts: proxmox
-    
-  roles:	 
-    - dependencies 
-    - ct
+  become: true
+
+  # solo para los roles destruir_ct/destruir_vm
+  vars_prompt:
+    - name: custom_vmid
+      prompt: "Ingresa el ID del CT/VM a eliminar"
+      private: no
+
+  roles:
+    - dependencias
+    - creacion_ct
+    - destruir_ct
+    - creacion_vms
+    - destruir_vm
 

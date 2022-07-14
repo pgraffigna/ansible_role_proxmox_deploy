@@ -1,0 +1,22 @@
+---
+- include_vars: ../../../vars_main.yml
+
+- name: Creacion de VM
+  proxmox_kvm:
+    api_user: "{{ api_user }}"
+    api_password: "{{ api_password }}"
+    api_host: "{{ api_host }}"
+    node: "{{ node }}"
+    vmid:
+    name: testing-vm1
+    net: '{"net0":"virtio,bridge=vmbr0"}'
+    virtio: '{"virtio0":"vms:10,cache=writeback,discard=on"}'
+    scsihw: 'virtio-scsi-pci'
+    cores: '2'
+    memory: '1024'
+    balloon: '512'
+    vga: "qxl"
+    cpu: "host"
+    ostype: 'l26'
+    onboot: 'yes'
+    state: present

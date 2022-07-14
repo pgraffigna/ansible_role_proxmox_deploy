@@ -2,7 +2,7 @@
 - name: Elimina repos enterprise
   file:
     path: /etc/apt/sources.list.d/pve-enterprise.list
-    state: absent 
+    state: absent
 
 - name: Agrega repos community
   apt_repository:
@@ -14,10 +14,10 @@
     update_cache: yes
     cache_valid_time: 3600
 
-- name: Instalación de pip 
+- name: Instalación de pip
   apt:
     name: ['python3-pip', 'python3-dev', 'build-essential']
-      
+
 - name: Actualizacion de pip
   pip:
     name: pip
@@ -26,4 +26,3 @@
 - name: Instalacion de dependencias ansible
   pip:
     name: ['requests', 'proxmoxer']
-    
